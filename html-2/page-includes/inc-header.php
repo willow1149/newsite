@@ -131,8 +131,7 @@ ob_start("minify_output");
 		.sm-simple a:focus,
 		.sm-simple a:active,
 		.sm-simple a.highlighted {
-			background: #f58220;
-			color: white;
+			color: black;
 		}
 		.sm-simple a.disabled {
 			color: #333;
@@ -183,7 +182,8 @@ ob_start("minify_output");
 				background: white;
 			}
 			.sm-simple li {
-				display: table-cell;
+				display: inline-block;
+				border-right: 1px solid #333333;
 			}
 			.sm-simple ul li,
 			.sm-simple.sm-rtl ul li,
@@ -377,10 +377,34 @@ ob_start("minify_output");
 		/* extra small devices, phones */
 		@media only screen and (min-width: 480px) {}
 		/* small devices, tablets */
-		@media only screen and (min-width: 768px) {
-			/* menu max width */
-			.sm{        
-				max-width: 320px;
+		@media only screen and (min-width: 768px) and (max-width: 991px;) {
+			.main-header #logo .res-img{
+				margin: 0 auto;
+			}
+			.menu-outer{
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: #fff;
+				width: 125px;
+				height: 50px;
+			}
+			.menu-toggle{
+				height: 100%;
+			}
+			.menu-toggle .hamburger{
+				padding: 10px 0;
+			}
+			.menu-toggle .cross {
+				position: absolute;
+				height: 80%;
+				width: 80%;
+				transform: rotate(45deg);
+			}
+			.menu-toggle .ham-txt{
+				position: absolute;
+				left: -38px;
+				top: 14px;
 			}
 		}
 		@media only screen and (max-width: 768px) {
@@ -391,20 +415,64 @@ ob_start("minify_output");
 				display: inline-block;
 				background-color: #01809c;
 			}
+			.main-header .menu-outer{
+				width: 50%;
+				height: 50px;
+				display: inline-block;
+				background-color: white;
+			}
 			.main-header #logo .res-img{
 				height: 50px;
 				margin: 0 auto; 
+			}
+			.menu-toggle {
+				width: 50%;
+				height: 50px;
+				right: 0px;
+			}
+			.menu-toggle .hamburger {
+				padding: 10px 0;
+				left: 0;
+				right: 0;
+				width: 50px;
+				margin: 0 auto;
+			}
+			.menu-toggle .cross {
+				position: absolute;
+				height: 36px;
+				width: 42px;
+				transform: rotate(45deg);
+				right: 3px;
+				left: 0;
+				margin: 0 auto;
+				top: 3px;
 			}
 		}
 		/* medium devices, desktops */
 		@media only screen and (min-width: 992px) {
 			/* main menu */
 			.main-menu-container {
-				display: block !important;
-				position: relative;
+				position: absolute;
+				top: 0;
 			}
-			.mainmenutoggle {
-				display: none;
+			.main-header{
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+				background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+			}
+			.main-header #logo .res-img{
+				margin: 0 auto;
+			}
+			.menu-toggle .cross{
+				z-index: 70;
+			}
+			.menu-outer{
+				width: 100%;
+			}
+			.sm-simple a{
+				padding: 20px 14px;
 			}
 		}
 		/* large devices, wide screens */
@@ -423,7 +491,9 @@ ob_start("minify_output");
 					<a href="#" id="logo">
 						<img class="img-responsive res-img" src="../images/logo.png" alt="">
 					</a>
-					<?php require_once('../modules/main-menu.php') ?>
+					<div class="menu-outer">
+						<?php require_once('../modules/main-menu.php') ?>
+					</div>
 				</div>
 				<div class="main-slider-outer">
 					<?php require_once('../modules/main-slider.php') ?>

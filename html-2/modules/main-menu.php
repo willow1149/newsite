@@ -8,7 +8,7 @@
     <span></span>
     <span></span>
   </div>
-  <div class="menu-btn-txt">Menu</div>
+  <div class="ham-txt hidden-xs">Menu</div>
 </div>
 <div class="main-menu-container clearfix">
   <!-- use .sm-vertical for vertical menu : SmartMenus - http://www.smartmenus.org/docs/ -->
