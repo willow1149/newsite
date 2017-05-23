@@ -89,6 +89,7 @@ $(window).load(function(e){
     if ($('.menu-toggle').length) {
         $('.menu-toggle').click(function() {
             $(this).toggleClass('open');
+            $('#logo').toggleClass('hide-logo')
         });
     }
 });
@@ -96,7 +97,7 @@ $(window).load(function(e){
 $(document).ready(function(){
     /* main navigation */
     hamburgerdrop('.mainmenutoggle', '.main-menu-container');
-    
+ 
     var breakpoint = 991;
     e = {
         loop: !0,
