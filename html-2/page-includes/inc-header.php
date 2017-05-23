@@ -131,6 +131,7 @@ ob_start("minify_output");
 		.sm-simple a:focus,
 		.sm-simple a:active,
 		.sm-simple a.highlighted {
+			background-color: #4bccba; 
 			color: black;
 		}
 		.sm-simple a.disabled {
@@ -558,9 +559,7 @@ ob_start("minify_output");
 		}
 		/* large devices, wide screens */
 		@media only screen and (min-width: 1200px) {
-			#eme-slider-wrap-full-screen , #eme-slider-wrap-full-screen .item {
-				max-height: 662px; /* this should be the desktop image actual height - change accordingly */
-			}
+
 		}
 	</style>
 </head>
