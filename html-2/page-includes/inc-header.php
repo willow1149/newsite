@@ -25,11 +25,14 @@ ob_start("minify_output");
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
+		li{
+			list-style: none;
+		}
 		.container-fluid{
 			max-width: 1600px;
 		}
@@ -39,6 +42,24 @@ ob_start("minify_output");
 			z-index: 999;
 			max-width: 1600px;
 			width: 100%;
+		}
+		.welcome-wrapper{
+			margin-top: 10px;
+		}
+		.social-share{
+			margin-top: 10px;
+		}
+		.share-icon{
+			width: 25px;
+			margin: 0 auto;
+			display: block; 
+		}
+		.social-icons{
+			background-color: #f1f1f1;
+			position: absolute;
+		}
+		.social-icons ul li{
+			display: inline-block;
 		}
 		/* main menu */
 		.main-menu-container {
@@ -374,7 +395,33 @@ ob_start("minify_output");
 		}
 		/* ––––––––––– media Queries ––––––––––– */
 		/* custom, iphone retina */
-		@media only screen and (min-width: 320px) {}
+		@media only screen and (min-width: 320px) {
+			/* Social Share */
+			.social-icons{
+				left: 0;
+				right: 0;
+				margin:0 15px;
+				border-radius: 5px;
+				display: none;
+			}
+			.show-icons{
+				display: block;
+			}
+			.social-icons .text{
+				padding: 10px 0;
+				text-transform: uppercase;
+				border-bottom: 1px solid #dcdcdc;
+			}
+			.social-icons ul{
+				padding-left: 0px;
+				margin-bottom: 0px;
+				text-align: center;
+			}
+			.social-icons ul li{
+				padding: 10px;
+				height: 45px;
+			}
+		}
 		/* extra small devices, phones */
 		@media only screen and (min-width: 480px) {}
 		/* small devices, tablets */
@@ -564,6 +611,7 @@ ob_start("minify_output");
 	</style>
 </head>
 <body>
+	<?php require_once('../modules/inc-svg.php'); ?>
 	<div class="container-fluid">
 		<div class="row">
 			<header>
@@ -572,11 +620,11 @@ ob_start("minify_output");
 						<img class="img-responsive res-img" src="../images/logo.png" alt="">
 					</a>
 					<div class="menu-outer">
-						<?php require_once('../modules/main-menu.php') ?>
+						<?php require_once('../modules/main-menu.php'); ?>
 					</div>
 				</div>
 				<div class="main-slider-outer">
-					<?php require_once('../modules/main-slider.php') ?>
+					<?php require_once('../modules/main-slider.php'); ?>
 				</div>
 			</header>
 		</div>

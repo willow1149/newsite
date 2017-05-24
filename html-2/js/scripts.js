@@ -73,6 +73,7 @@ function hamburgerdrop(elemclick, target) {
     }
 }
 
+
 $(window).load(function(e){
     /* smart menu */
     if ($('#main-menu').length) {
@@ -94,9 +95,19 @@ $(window).load(function(e){
     }
 });
 
+function toggleshare(){
+    if($('#shareicon').length){
+        $('#shareicon').click(function(){
+            $('#displayicons').toggleClass('show-icons')
+        });
+    }
+}
+
 $(document).ready(function(){
     /* main navigation */
     hamburgerdrop('.mainmenutoggle', '.main-menu-container');
+    /* toggleshare */
+    toggleshare();
  
     var breakpoint = 991;
     e = {
