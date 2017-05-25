@@ -18,19 +18,40 @@ Text Domain: citrusleisure
 
 //Header
 .branding{
-	float: left;
-	#logo {
-		display: inline-block;
-	}
+    float: left;
+    #logo {
+        display: inline-block;
+    }
 }
 
 @font-family{
-	font-family: 'Montaga-Regular';
-  src: url('fonts/Montaga-Regular.eot?#iefix') format('embedded-opentype'),
-  url('fonts/Montaga-Regular.woff') format('woff'),
-  url('fonts/Montaga-Regular.ttf')format('truetype'),
-  url('fonts/Montaga-Regular.svg#Montaga-Regular') format('svg');
+    font-family: 'Montaga-Regular';
+    src: url('fonts/Montaga-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Montaga-Regular.woff') format('woff'),
+    url('fonts/Montaga-Regular.ttf')format('truetype'),
+    url('fonts/Montaga-Regular.svg#Montaga-Regular') format('svg');
 }
+
+.section-one{
+        .sec-sub-one{
+            height: 400px;
+            width: 100%;
+            background: red;
+            margin-top: 10px;
+        }
+        .sec-sub-two{
+            height: 400px;
+            width: 100%;
+            background: gold;
+            margin-top: 10px;
+        }
+        .sec-sub-three{
+            height: 400px;
+            width: 100%;
+            background: blue;
+            margin-top: 10px;
+        }
+    }
 
 // #Media Queries
 /* ================================================== */
@@ -40,45 +61,42 @@ Text Domain: citrusleisure
 }
 // Larger than standard 992 (devices and browsers) 
 @media only screen and (min-width: 992px) {
-	.main-menu{
-    height: 50px;
-    z-index: 999;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100 */
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-    .logo{
-      img{
+    /* Social Share */
+    .social-icons{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-      }
+        z-index: 1;
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;} 
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            top: -9px;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #f1f1f1 transparent;
+        }
     }
-  }
-  .main-slider-outer{
-    #main-slider{
-      width: 100%;
-      font-size: 0;
-      .item{
-        width: 20%;
-        display: inline-block;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 500px;
-      }
-    }
-  }
 }
 // Larger than standard 768 (devices and browsers) 
 @media only screen and (min-width: 768px) {
-	
+
 }
 // Smaller than standard 1200 (devices and browsers) 
 @media only screen and (max-width: 1199px) {
-	
+
 } 
 // Between 1200 and 1000 (devices and browsers) 
 @media only screen and (min-width: 991px) and (max-width: 1199px) {
@@ -90,19 +108,50 @@ Text Domain: citrusleisure
 }
 // Smaller than standard 992 (devices and browsers) 
 @media only screen and (max-width: 991px) {
-  .main-slider-outer{
-    #main-slider{
-      .item{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 450px;
-        .layer{
-            display: none;
+    .main-slider-outer{
+        #main-slider{
+            .item{
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 450px;
+                .layer{
+                    display: none;
+                }
+            }
         }
-      }
     }
-  }
+    /* Social Share */
+    .social-icons{
+        left: 0;
+        right: 0;
+        margin:0 15px;
+        border-radius: 5px;
+        &:after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+    }
+    .social-icons .text{
+        padding: 10px 0;
+        text-transform: uppercase;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .social-icons ul{
+        padding-left: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .social-icons ul li{
+        padding: 10px;
+        height: 45px;
+    }
 }
 // Tablet Portrait size to standard 960 (devices and browsers)
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -110,15 +159,35 @@ Text Domain: citrusleisure
 }
 // All Mobile Sizes (devices and browser) 
 @media only screen and (max-width: 767px) {
-  .main-slider-outer{
-    #main-slider{
-      .item{
-        .link{
-          display: none;
+    .main-slider-outer{
+        #main-slider{
+            .item{
+                .link{
+                    display: none;
+                }
+            }
         }
-      }
     }
-  }
+    .section-one{
+        .sec-sub-one{
+            height: 400px;
+            width: 100%;
+            background: red;
+            margin-top: 10px;
+        }
+        .sec-sub-two{
+            height: 400px;
+            width: 100%;
+            background: gold;
+            margin-top: 10px;
+        }
+        .sec-sub-three{
+            height: 400px;
+            width: 100%;
+            background: blue;
+            margin-top: 10px;
+        }
+    }
 }
 // Mobile Landscape Size to Tablet Portrait (devices and browsers)
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -134,49 +203,49 @@ Text Domain: citrusleisure
 } 
 // Mixin
 .removeULStyles() {
-	padding : 0;
-	margin : 0;
-	list-style-type : none;
-	border : none;
+    padding : 0;
+    margin : 0;
+    list-style-type : none;
+    border : none;
 }
 .displayTable(){
-	display: table;
-	width : 100%;
+    display: table;
+    width : 100%;
 }
 .webkitTransition(@param){
-	-webkit-transition:@param .2s ease-in;
-	-moz-transition:@param .2s ease-in;
-	-o-transition:@param .2s ease-in;
-	transition:@param .2s ease-in;
+    -webkit-transition:@param .2s ease-in;
+    -moz-transition:@param .2s ease-in;
+    -o-transition:@param .2s ease-in;
+    transition:@param .2s ease-in;
 }
 .focusBorder(@param){
-	border : 1px solid @param !important;
-	-webkit-box-shadow: 0px 0px 15px -8px @param;
-	-moz-box-shadow: 0px 0px 15px -8px @param;
-	box-shadow: 0px 0px 15px -8px @param;
+    border : 1px solid @param !important;
+    -webkit-box-shadow: 0px 0px 15px -8px @param;
+    -moz-box-shadow: 0px 0px 15px -8px @param;
+    box-shadow: 0px 0px 15px -8px @param;
 }
 
 .viewall(@background , @color , @hover , @hover-color ){
-	background: @background;
-	color: @color;
-	height: 50px;
-	line-height: 18px;
-	text-transform: uppercase;
-	font-size : 13px;
-	padding:15px 24px;
-	min-width: 150px;
-	.webkitTransition(background);
-	&:hover{
-		background : @hover;
-		color: @hover-color;
-	}
+    background: @background;
+    color: @color;
+    height: 50px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-size : 13px;
+    padding:15px 24px;
+    min-width: 150px;
+    .webkitTransition(background);
+    &:hover{
+        background : @hover;
+        color: @hover-color;
+    }
 }
 
 /**
- * owl carousel v2.2.0
- * copyright 2013-2016 david deutsch
- * licensed under mit (https://github.com/owlcarousel2/owlcarousel2/blob/master/license)
- */
+* owl carousel v2.2.0
+* copyright 2013-2016 david deutsch
+* licensed under mit (https://github.com/owlcarousel2/owlcarousel2/blob/master/license)
+*/
 
 .owl-carousel.off {
     display: block;

@@ -1,6 +1,6 @@
 <?php /*Template:HOME*/ ?>
 <?php require_once('../page-includes/inc-header.php') ?>
-
+<div id="scrollto"></div>
 <div class="row welcome-wrapper">
 	<div class="col-md-2 col-lg-2 text-center">
 		<h3>Welcome!!!</h3>
@@ -10,7 +10,7 @@
 	</div>
 </div>
 <div class="social-share">
-	<a href="#" class="share-icon" id="shareicon">
+	<a href="#" class="share-icon remove-href" id="shareicon">
 		<svg width="25" height="25" aria-hidden="true">
 			<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#share"></use>
 		</svg> 
@@ -53,7 +53,33 @@
 					</svg> 
 				</a>
 			</li>
+			<li>
+				<a href="#">
+					<svg width="25" height="25" aria-hidden="true">
+						<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#facebook"></use>
+					</svg> 
+				</a>
+			</li>
 		</ul>
+	</div>
+</div>
+<div class="section-one">
+	<div class="row">
+		<div class="col-xs-12 col-sm-4">
+			<div class="sec-sub-one">
+				
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="sec-sub-two">
+				
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-4">
+			<div class="sec-sub-three">
+				
+			</div>
+		</div>
 	</div>
 </div>
 

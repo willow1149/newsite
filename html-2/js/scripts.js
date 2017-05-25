@@ -16,6 +16,16 @@ function swapLogo() {
     $('.swinger-logo').attr("src", $('.swinger-logo').data(i));
 }
 
+// get real windiw width without scrollbars
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}
+
 // SmartMenus init
 $(function() {
   $('#main-menu').smartmenus({
@@ -103,12 +113,53 @@ function toggleshare(){
     }
 }
 
+function scrolldown(){
+    $("#toggledown").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#scrollto").offset().top},
+            'slow');
+    })
+}
+
+function showmenuscroll(){
+    $(window).scroll(function(){                          
+        if ($(this).scrollTop() > 200) {
+            $('.main-menu-container').fadeIn(500);
+        } else {
+            $('.main-menu-container').fadeOut(500);
+        }
+    });
+}
+
+$(window).scroll(function() {
+    var windowidth = viewport().width;
+    console.log(windowidth);
+    if (windowidth > 992){
+        if ($(window).scrollTop() >= 42) {
+          $(".res-img").hide();
+      } else {
+          $(".res-img").show();
+      }
+  }
+});
+
 $(document).ready(function(){
+
     /* main navigation */
     hamburgerdrop('.mainmenutoggle', '.main-menu-container');
+    
     /* toggleshare */
     toggleshare();
- 
+    
+    /* remove href */
+    $(".remove-href").removeAttr("href").css("cursor","pointer");
+    
+    /* scroll to #scrollto */
+    scrolldown();
+    
+    /* show menu fixed top when scrolling down */
+    showmenuscroll();
+
     var breakpoint = 991;
     e = {
         loop: !0,

@@ -16,7 +16,7 @@ function minify_output($buffer)
 	}
 	return $buffer;
 }
-ob_start("minify_output");
+//ob_start("minify_output");
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,6 +35,9 @@ ob_start("minify_output");
 		}
 		.container-fluid{
 			max-width: 1600px;
+		}
+		header{
+			position: relative;
 		}
 		.main-header{
 			position: fixed;
@@ -69,10 +72,6 @@ ob_start("minify_output");
 			right: 0;
 			top: 50px;
 			z-index: 66;
-		}
-		/* body */
-		.body{
-			margin-top: 40px;
 		}
 		/* sm-simple */
 		.sm {
@@ -393,34 +392,27 @@ ob_start("minify_output");
 			width: 30px;
 			/*transition-delay: .375s;*/
 		}
+		.social-icons{
+			display: none;
+		}
+		.show-icons{
+			display: block;
+		}
+		/* toggle down */
+		.toggle-down{    
+			position: absolute;
+			height: 25px;
+			width: 25px;
+			bottom: 12px;
+			z-index: 1;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+		}
 		/* ––––––––––– media Queries ––––––––––– */
 		/* custom, iphone retina */
 		@media only screen and (min-width: 320px) {
-			/* Social Share */
-			.social-icons{
-				left: 0;
-				right: 0;
-				margin:0 15px;
-				border-radius: 5px;
-				display: none;
-			}
-			.show-icons{
-				display: block;
-			}
-			.social-icons .text{
-				padding: 10px 0;
-				text-transform: uppercase;
-				border-bottom: 1px solid #dcdcdc;
-			}
-			.social-icons ul{
-				padding-left: 0px;
-				margin-bottom: 0px;
-				text-align: center;
-			}
-			.social-icons ul li{
-				padding: 10px;
-				height: 45px;
-			}
+			
 		}
 		/* extra small devices, phones */
 		@media only screen and (min-width: 480px) {}
@@ -481,6 +473,7 @@ ob_start("minify_output");
 				height: 50px;
 				display: inline-block;
 				background-color: white;
+				float: right;
 			}
 			.main-header #logo .res-img{
 				height: 50px;
@@ -603,12 +596,38 @@ ob_start("minify_output");
 				bottom: 0;
 				line-height: 17px;
 			}
+			/*social share*/
+			.social-icons{
+				left: 50%;
+				margin-top: 10px;
+				transform: translateX(-50%);
+				border-radius: 5px;
+				position: absolute;
+				z-index: 1;
+			}
+			.social-icons .text{
+				padding: 10px 0;
+				text-transform: uppercase;
+				border-bottom: 1px solid #dcdcdc;
+			}
+			.social-icons ul{
+				padding-left: 0px;
+				margin-bottom: 0px;
+				text-align: center;
+			}
+			.social-icons ul li{
+				padding: 10px;
+				height: 45px;
+			}
 		}
 		/* large devices, wide screens */
 		@media only screen and (min-width: 1200px) {
 
 		}
 	</style>
+	<script type="text/javascript">
+
+	</script>
 </head>
 <body>
 	<?php require_once('../modules/inc-svg.php'); ?>
@@ -626,5 +645,10 @@ ob_start("minify_output");
 				<div class="main-slider-outer">
 					<?php require_once('../modules/main-slider.php'); ?>
 				</div>
+				<a href="#" class="toggle-down remove-href" id="toggledown">
+					<svg width="25" height="25" aria-hidden="true">
+						<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#down"></use>
+					</svg> 
+				</a>
 			</header>
 		</div>
