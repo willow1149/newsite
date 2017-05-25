@@ -121,25 +121,21 @@ function scrolldown(){
     })
 }
 
-function showmenuscroll(){
-    $(window).scroll(function(){                          
-        if ($(this).scrollTop() > 200) {
-            $('.main-menu-container').fadeIn(500);
-        } else {
-            $('.main-menu-container').fadeOut(500);
-        }
-    });
-}
-
 $(window).scroll(function() {
     var windowidth = viewport().width;
-    console.log(windowidth);
     if (windowidth > 992){
         if ($(window).scrollTop() >= 42) {
           $(".res-img").hide();
       } else {
           $(".res-img").show();
       }
+  }
+  if (windowidth > 992){
+         if ($(window).scrollTop() > 200) {
+            $('.main-menu-container').fadeIn(500);
+        } else {
+            $('.main-menu-container').fadeOut(500);
+        }
   }
 });
 
@@ -156,9 +152,6 @@ $(document).ready(function(){
     
     /* scroll to #scrollto */
     scrolldown();
-    
-    /* show menu fixed top when scrolling down */
-    showmenuscroll();
 
     var breakpoint = 991;
     e = {
