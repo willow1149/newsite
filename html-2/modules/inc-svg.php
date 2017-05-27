@@ -34,4 +34,95 @@
       <path fill="#FFF" d="M225.923 354.706c-8.098 0-16.195-3.092-22.369-9.263L9.27 151.157c-12.359-12.359-12.359-32.397 0-44.751 12.354-12.354 32.388-12.354 44.748 0l171.905 171.915 171.906-171.909c12.359-12.354 32.391-12.354 44.744 0 12.365 12.354 12.365 32.392 0 44.751L248.292 345.449c-6.177 6.172-14.274 9.257-22.369 9.257z"/>
     </g>
   </symbol>
+  <symbol id="asdfghjkl" viewBox="0 0 1365.33 1365.33">
+    <defs id="defs2048">
+      <radialGradient id="radialGradient2070" cx="0" cy="0" r="1" fx="0" fy="0" gradientTransform="matrix(94.3123 0 0 87.8804 487.618 449.976)" gradientUnits="userSpaceOnUse" spreadMethod="pad">
+        <stop id="stop2066" offset="0" stop-color="#c8c9ca"/>
+        <stop id="stop2068" offset="1" stop-color="#efeff0"/>
+      </radialGradient>
+      <radialGradient id="radialGradient2096" cx="0" cy="0" r="1" fx="0" fy="0" gradientTransform="matrix(56.7968 63.78256 62.28101 -58.16306 621.36 710.54)" gradientUnits="userSpaceOnUse" spreadMethod="pad">
+        <stop id="stop2086" offset="0" stop-color="#eb2227"/>
+        <stop id="stop2088" offset=".35" stop-color="#eb2227"/>
+        <stop id="stop2090" offset=".41" stop-color="#eb2227"/>
+        <stop id="stop2092" offset=".69" stop-color="#be202e"/>
+        <stop id="stop2094" offset="1" stop-color="#670c0f"/>
+      </radialGradient>
+      <radialGradient id="radialGradient2130" cx="0" cy="0" r="1" fx="0" fy="0" gradientTransform="matrix(-167.64032 13.10195 12.78597 171.66824 522.192 632.931)" gradientUnits="userSpaceOnUse" spreadMethod="pad">
+        <stop id="stop2112" offset="0" stop-color="#fff"/>
+        <stop id="stop2114" offset=".12" stop-color="#fbfcfc"/>
+        <stop id="stop2116" offset=".25" stop-color="#f0eeef"/>
+        <stop id="stop2118" offset=".38" stop-color="#dbdadb"/>
+        <stop id="stop2120" offset=".52" stop-color="#aba9ab"/>
+        <stop id="stop2122" offset=".75" stop-color="#5e5a5b"/>
+        <stop id="stop2124" offset=".87" stop-color="#343031"/>
+        <stop id="stop2126" offset=".95" stop-color="#720f11"/>
+        <stop id="stop2128" offset="1" stop-color="#ad2225"/>
+      </radialGradient>
+      <radialGradient id="radialGradient2158" cx="0" cy="0" r="1" fx="0" fy="0" gradientTransform="matrix(-139.13428 142.4812 139.13428 142.4812 671.528 601.536)" gradientUnits="userSpaceOnUse" spreadMethod="pad">
+        <stop id="stop2146" offset="0" stop-color="#f69321"/>
+        <stop id="stop2148" offset=".1" stop-color="#f69321"/>
+        <stop id="stop2150" offset=".35" stop-color="#eb2227"/>
+        <stop id="stop2152" offset=".41" stop-color="#eb2227"/>
+        <stop id="stop2154" offset=".69" stop-color="#be202e"/>
+        <stop id="stop2156" offset="1" stop-color="#670c0f"/>
+      </radialGradient>
+      <radialGradient id="radialGradient2184" cx="0" cy="0" r="1" fx="0" fy="0" gradientTransform="matrix(149.85837 0 0 153.44872 560.75 646.762)" gradientUnits="userSpaceOnUse" spreadMethod="pad">
+        <stop id="stop2174" offset="0" stop-color="#2aabe2"/>
+        <stop id="stop2176" offset=".37" stop-color="#1e75bb"/>
+        <stop id="stop2178" offset=".57" stop-color="#2a3b8f"/>
+        <stop id="stop2180" offset=".83" stop-color="#282460"/>
+        <stop id="stop2182" offset="1" stop-color="#140f39"/>
+      </radialGradient>
+    </defs>
+    <g id="g2052" transform="matrix(1.33333 0 0 -1.33333 0 1365.333)">
+      <g id="g2054">
+        <g id="g2056">
+          <g id="g2062">
+            <g id="g2064">
+              <path id="path2072" fill="url(#radialGradient2070)" d="M354.446 449.977c0-3.809 59.627-6.895 133.172-6.895 73.55 0 133.173 3.086 133.173 6.895 0 3.804-59.623 6.888-133.173 6.888-73.545 0-133.172-3.084-133.172-6.888"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="g2074">
+        <g id="g2076">
+          <g id="g2082">
+            <g id="g2084">
+              <path id="path2098" fill="url(#radialGradient2096)" d="M583.172 737.944l15.033-21.481 33.035-37.872s5.596 24.126 5.09 26.843c-.486 2.689-20.184 35.221-20.184 35.221l-25.706 13.598-20.622 11.075c-.007.004-24.168 4.698-33.298 5.04 0 0 30.011-8.701 46.652-32.424"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="g2100">
+        <g id="g2102">
+          <g id="g2108">
+            <g id="g2110">
+              <path id="path2132" fill="url(#radialGradient2130)" d="M471.921 726.032c-70.426-29.034-104.53-111.078-76.16-183.201 28.394-72.104 108.526-107.034 178.952-77.942 70.426 29.078 104.505 111.073 76.111 183.201-21.599 54.871-73.121 88.196-127.539 88.197-17.115 0-34.516-3.296-51.364-10.255"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="g2134">
+        <g id="g2136">
+          <g id="g2142">
+            <g id="g2144">
+              <path id="path2160" fill="url(#radialGradient2158)" d="M534.203 771.058c25.799-3.406 41.219-14.477 41.219-14.477 64.139-44.596 48.604-122.022 48.604-122.022-10.38-62.435-62.796-96.69-100.09-113.403-22.887-10.254-57.06-20.75-63.81-23.267-7.309-2.754-13.548-5.586-18.891-8.444 63.77-55.3 159.368-49.418 216.132 14.301 58.092 65.239 53.549 166.319-10.156 225.796-29.915 27.944-67.568 41.72-105.103 41.72-2.636 0-5.273-.068-7.905-.204"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="g2162">
+        <g id="g2164">
+          <g id="g2170">
+            <g id="g2172">
+              <path id="path2186" fill="url(#radialGradient2184)" d="M471.921 726.032c-69.753-28.759-103.837-109.479-76.943-181.049 62.355 37.919 145.745 66.958 145.745 66.958 82.242 34.728 42.873 104.678 42.873 104.678-1.477 2.821-3.149 5.365-4.926 7.712-17.316 7.804-36.175 11.965-55.388 11.965-17.115.001-34.51-3.299-51.361-10.264"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <text id="text2190" font-family="Prototype" font-size="179" font-weight="400" style="-inkscape-font-specification:Prototype" transform="matrix(1 0 0 -1 337.172 296.018)">
+        <tspan id="tspan2188" x="0 99.17 202.45" y="0">FED</tspan>
+      </text>
+    </g>
+  </symbol>
 </svg>

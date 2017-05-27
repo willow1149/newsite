@@ -63,7 +63,7 @@
 		</ul>
 	</div>
 </div>
-<div class="section-one">
+<div class="section-one clearfix">
 	<div class="row no-padding">
 		<div class="col-xs-12 col-md-5 col-md-push-7 right-section"  style="background-image: url(../images/sec-one-right-bg-img.jpg);">
 		</div>
@@ -77,9 +77,17 @@
 	</div>
 </div>
 
-<div class="section-two">
-	<div class="sub-section">
-		
+<div class="section-two-carousel">
+	<div id="sync1" class="owl-carousel">
+		<div class="item" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+		<div class="item" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+		<div class="item" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+	</div>
+
+	<div id="sync2" class="owl-carousel">
+		<div class="item" style="background-image: url(../images/car.jpg);"></div>
+		<div class="item" style="background-image: url(../images/car.jpg);"></div>
+		<div class="item" style="background-image: url(../images/car.jpg);"></div>
 	</div>
 </div>
 

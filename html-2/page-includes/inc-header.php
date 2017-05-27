@@ -639,7 +639,7 @@ function minify_output($buffer)
 			<header>
 				<div class="main-header">
 					<a href="#" id="logo">
-						<img class="img-responsive res-img" src="../images/logo.png" alt="">
+						<img class="img-responsive res-img" src="../images/logo.svg" alt="">
 					</a>
 					<div class="menu-outer">
 						<?php require_once('../modules/main-menu.php'); ?>
