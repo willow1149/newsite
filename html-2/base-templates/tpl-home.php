@@ -78,16 +78,52 @@
 </div>
 
 <div class="section-two-carousel">
-	<div id="sync1" class="owl-carousel">
-		<div class="item" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
-		<div class="item" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
-		<div class="item" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+	<div id="sync1" class="owl-carousel sync-1">
+		<div class="item clearfix">
+			<div class="item-inner" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+			<div class="inner">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="" class="item-inner-link">View More</a>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-inner" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+			<div class="inner">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="" class="item-inner-link">View More</a>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-inner" style="background-image: url(../images/sec-one-right-bg-img.jpg);"></div>
+			<div class="inner">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="" class="item-inner-link">View More</a>
+			</div>
+		</div>
 	</div>
 
-	<div id="sync2" class="owl-carousel">
-		<div class="item" style="background-image: url(../images/car.jpg);"></div>
-		<div class="item" style="background-image: url(../images/car.jpg);"></div>
-		<div class="item" style="background-image: url(../images/car.jpg);"></div>
+	<div id="sync2" class="owl-carousel sync-2">
+		<div class="item">
+			<div class="item-inner" style="background-image: url(../images/car.jpg);"></div>
+			<div class="inner">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="" class="item-inner-link">View More</a>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-inner" style="background-image: url(../images/car.jpg);"></div>
+			<div class="inner">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="" class="item-inner-link">View More</a>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-inner" style="background-image: url(../images/car.jpg);"></div>
+			<div class="inner">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<a href="" class="item-inner-link">View More</a>
+			</div>
+		</div>
 	</div>
 </div>
 
