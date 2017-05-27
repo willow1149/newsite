@@ -116,7 +116,7 @@ function toggleshare(){
 function scrolldown(){
     $("#toggledown").click(function() {
         $('html,body').animate({
-            scrollTop: $("#scrollto").offset().top},
+            scrollTop: $("#scrollto").offset().top - 50},
             'slow');
     })
 }
@@ -131,7 +131,7 @@ $(window).scroll(function() {
       }
   }
   if (windowidth > 992){
-         if ($(window).scrollTop() > 200) {
+         if ($(window).scrollTop() > 50) {
             $('.main-menu-container').fadeIn(500);
         } else {
             $('.main-menu-container').fadeOut(500);

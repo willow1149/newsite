@@ -30,6 +30,9 @@ function minify_output($buffer)
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
+		body{
+			font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
 		li{
 			list-style: none;
 		}

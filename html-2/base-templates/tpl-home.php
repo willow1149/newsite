@@ -64,22 +64,22 @@
 	</div>
 </div>
 <div class="section-one">
-	<div class="row">
-		<div class="col-xs-12 col-sm-4">
-			<div class="sec-sub-one">
-				
-			</div>
+	<div class="row no-padding">
+		<div class="col-xs-12 col-md-5 col-md-push-7 right-section"  style="background-image: url(../images/sec-one-right-bg-img.jpg);">
 		</div>
-		<div class="col-xs-12 col-sm-4">
-			<div class="sec-sub-two">
-				
+		<div class="col-xs-12 col-md-7 col-md-pull-5 left-section">
+			<div class="txt-layer">
+				<h1 class="text-center">Heading</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id egestas enim. Mauris feugiat elit vitae maximus varius. Mauris blandit ipsum bibendum, suscipit massa id, egestas arcu.</p>
 			</div>
+			<a href="#" class="link">View More</a>
 		</div>
-		<div class="col-xs-12 col-sm-4">
-			<div class="sec-sub-three">
-				
-			</div>
-		</div>
+	</div>
+</div>
+
+<div class="section-two">
+	<div class="sub-section">
+		
 	</div>
 </div>
 

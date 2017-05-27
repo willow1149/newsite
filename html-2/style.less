@@ -33,25 +33,16 @@ Text Domain: citrusleisure
 }
 
 .section-one{
-        .sec-sub-one{
-            height: 400px;
-            width: 100%;
-            background: red;
-            margin-top: 10px;
-        }
-        .sec-sub-two{
-            height: 400px;
-            width: 100%;
-            background: gold;
-            margin-top: 10px;
-        }
-        .sec-sub-three{
-            height: 400px;
-            width: 100%;
-            background: blue;
-            margin-top: 10px;
+    margin-top: 15px;
+    .no-padding{
+       margin-left: -15px !important;
+       margin-right: -15px !important;
+       [class*="col-"]{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
         }
     }
+}
 
 // #Media Queries
 /* ================================================== */
@@ -87,6 +78,53 @@ Text Domain: citrusleisure
             border-width: 5px;
             border-style: solid;
             border-color: transparent transparent #f1f1f1 transparent;
+        }
+    }
+    .section-one{
+        margin-top: 15px;
+        .no-padding{
+            background-color: #f5f5f5;
+            max-width: 1600px;
+            height: 400px;
+            .right-section{
+                height: 100%;
+                transition: all .3s;
+                -webkit-transition: all .3s;
+                .imgbg(no-repeat , 100% , center);
+                &:hover{
+                    background-size: 120%;
+                }
+            }
+            .left-section{ 
+                height: 100%;
+                padding: 90px;
+                .txt-layer{
+                    text-align: justify;
+                    text-align-last: center;
+                    -moz-text-align-last: center;
+                    p{
+                        margin: 20px 50px 50px 50px;
+                        font-size: 20px;
+                    }
+                }
+                .link{
+                    border: 1px solid #333;
+                    padding: 10px 20px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    width: 115px;
+                    margin: 0 auto;
+                    transition: all 1s;
+                    font-weight: 900;
+                    color: @black;
+                    &:hover , &:active{
+                        background-color: #01809c;
+                        text-decoration: none;
+                        color: @white;
+                    }
+                }
+            }
         }
     }
 }
@@ -127,15 +165,17 @@ Text Domain: citrusleisure
         right: 0;
         margin:0 15px;
         border-radius: 5px;
+        position: absolute;
+        z-index: 1;
         &:after{
             content: '';
             position: absolute;
-            top: 100%;
+            top: -9px;
             left: 50%;
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: #555 transparent transparent transparent;
+            border-color: transparent transparent #f1f1f1 transparent;
         }
     }
     .social-icons .text{
@@ -151,6 +191,47 @@ Text Domain: citrusleisure
     .social-icons ul li{
         padding: 10px;
         height: 45px;
+    }
+    .section-one{
+        .no-padding{
+            .right-section{
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 400px;
+                width: 100%;
+                overflow: hidden; 
+            }
+            .left-section{
+                height: 200px;
+                color: black;
+                .txt-layer{
+                    padding: 40px;
+                    text-align: justify;
+                    -moz-text-align-last: center; /* Code for Firefox */
+                    text-align-last: center;
+                }
+                .link{
+                    border: 1px solid #333;
+                    color: @black;
+                    font-weight: 500;
+                    padding: 12px 20px;
+                    border: 1px solid #333;
+                    color: #000;
+                    font-weight: 500;
+                    padding: 12px 20px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    width: 111px;
+                    margin: 0 auto;
+                    &:hover , :active{
+                        background-color: #01809c;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }
 // Tablet Portrait size to standard 960 (devices and browsers)
@@ -169,23 +250,13 @@ Text Domain: citrusleisure
         }
     }
     .section-one{
-        .sec-sub-one{
+        .sec-sub{
             height: 400px;
             width: 100%;
-            background: red;
             margin-top: 10px;
-        }
-        .sec-sub-two{
-            height: 400px;
-            width: 100%;
-            background: gold;
-            margin-top: 10px;
-        }
-        .sec-sub-three{
-            height: 400px;
-            width: 100%;
-            background: blue;
-            margin-top: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 }
@@ -239,6 +310,12 @@ Text Domain: citrusleisure
         background : @hover;
         color: @hover-color;
     }
+}
+
+.imgbg(@repeat , @cover , @center){
+    background-repeat: @repeat;
+    background-size: @cover;
+    background-position: @center;
 }
 
 /**
