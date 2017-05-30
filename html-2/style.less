@@ -47,6 +47,16 @@ Text Domain: citrusleisure
 .section-two-carousel{
     margin-right: -15px !important;
     margin-left: -15px !important;
+    .sync-1 , .sync-2{
+        .item{
+            .item-inner{
+
+            }
+            .inner{
+                background-color: #fbfee3;
+            }
+        }
+    }
 }
 
 // #Media Queries
@@ -127,6 +137,38 @@ Text Domain: citrusleisure
                         background-color: #01809c;
                         text-decoration: none;
                         color: @white;
+                    }
+                }
+            }
+        }
+    }
+    .section-two-carousel{
+        margin-top: 25px;
+        .sync-1{
+            width: 100%;
+            font-size: 0;
+            .item{
+                width: 25%;
+                display: inline-block;
+                font-size: 14px;
+                &:nth-child(1){
+                    width: 50%;
+                    vertical-align: top;
+                }
+                .item-inner{
+                    height: 200px;
+                    width: 100%;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    p{
+
+                    }
+                    .item-inner-link{
+
+                    }
+                    &:before{
+
                     }
                 }
             }
@@ -242,7 +284,7 @@ Text Domain: citrusleisure
 // Tablet Portrait size to standard 960 (devices and browsers)
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .section-two-carousel{
-        .sync-1 , .sync-2{
+        .sync-1{
             margin-top: 10px;
             .item{
                 width: 100%;
@@ -259,14 +301,86 @@ Text Domain: citrusleisure
                     float: left;
                     width: 50%;
                     font-size: 14px;
+                    height: 300px;
+                    padding-top: 80px;
+                    position: relative;
                     p{
-
+                        text-align: center;
+                        line-height: 20px;
                     }
                     .item-inner-link{
-
+                        font-weight: 900;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 113px;
+                        margin: 10px auto 0 auto;
+                        padding: 10px 20px;
+                        border: 1px solid #333;
                     }
                     &:before{
-
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: -40px;
+                        height: 20px;
+                        border-width: 20px;
+                        border-style: solid;
+                        border-color: transparent transparent #fbfee3 transparent;
+                        transform: rotate(90deg);
+                        margin: auto 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .section-two-carousel{
+        .sync-2{
+            margin-top: 10px;
+            .item{
+                width: 100%;
+                font-size: 0;
+                .item-inner{
+                    display: inline-block;
+                    height: 300px;
+                    width: 50%;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    display: inline-block;
+                    width: 50%;
+                    font-size: 14px;
+                    height: 300px;
+                    vertical-align: top;
+                    padding-top: 80px;
+                    position: relative;
+                    p{
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    .item-inner-link{
+                        font-weight: 900;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 113px;
+                        margin: 10px auto 0 auto;
+                        padding: 10px 20px;
+                        border: 1px solid #333;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -40px;
+                        height: 20px;
+                        border-width: 20px;
+                        border-style: solid;
+                        border-color: transparent transparent #fbfee3 transparent;
+                        transform: rotate(-90deg);
+                        margin: auto 0;
+                        bottom: 0;
                     }
                 }
             }
@@ -322,22 +436,22 @@ Text Domain: citrusleisure
                         border-color: transparent transparent #fbfee3 transparent;
                         transform: translateX(-50%);
                     }
-                }
-                .item-inner-link{
-                    border: 1px solid #333;
-                    padding: 10px 20px;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    width: 115px;
-                    margin: 25px auto;
-                    transition: all 1s;
-                    font-weight: 900;
-                    color: @black;
-                    &:hover , &:active{
-                        background-color: #01809c;
-                        text-decoration: none;
-                        color: @white;
+                    .item-inner-link{
+                        border: 1px solid #333;
+                        padding: 10px 20px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 115px;
+                        margin: 25px auto;
+                        transition: all 1s;
+                        font-weight: 900;
+                        color: @black;
+                        &:hover , &:active{
+                            background-color: #01809c;
+                            text-decoration: none;
+                            color: @white;
+                        }
                     }
                 }
             }

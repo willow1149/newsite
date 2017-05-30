@@ -109,7 +109,7 @@ function toggleshare(){
 function scrolldown(){
     $("#toggledown").click(function() {
         $('html,body').animate({
-            scrollTop: $("#scrollto").offset().top - 50},
+            scrollTop: $("#scrollto").offset().top },
             'slow');
     })
 }
