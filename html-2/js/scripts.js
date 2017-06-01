@@ -9,13 +9,6 @@ function setsrc(e) {
     });
 }
 
-// swap logo according to width
-function swapLogo() {
-
-    var i = viewport().width >= 767 ? "src-1200px" : "src-768px";
-    $('.swinger-logo').attr("src", $('.swinger-logo').data(i));
-}
-
 // get real windiw width without scrollbars
 function viewport() {
     var e = window, a = 'inner';
@@ -116,12 +109,12 @@ function toggleshare(){
 function scrolldown(){
     $("#toggledown").click(function() {
         $('html,body').animate({
-            scrollTop: $("#scrollto").offset().top},
+            scrollTop: $("#scrollto").offset().top },
             'slow');
     })
 }
 
-$(window).scroll(function() {
+/*$(window).scroll(function() {
     var windowidth = viewport().width;
     if (windowidth > 992){
         if ($(window).scrollTop() >= 42) {
@@ -131,13 +124,15 @@ $(window).scroll(function() {
       }
   }
   if (windowidth > 992){
-         if ($(window).scrollTop() > 200) {
+         if ($(window).scrollTop() > 50) {
             $('.main-menu-container').fadeIn(500);
         } else {
             $('.main-menu-container').fadeOut(500);
         }
   }
-});
+});*/
+
+
 
 $(document).ready(function(){
 
@@ -173,4 +168,22 @@ $(document).ready(function(){
     2 - carousel args
     */
     owlsonrequireddevicesonly("#main-slider", breakpoint, e); 
+
+    /* sync1 carousel */
+    var breakpoint = 991;
+    e = {
+        loop: !0,
+        responsive: {
+            0: {
+                items: 1,
+                dots: !1
+            }
+        }
+    }
+    /** @param
+    0 - elem id / elem class
+    1 - breakpoint where you want carousel
+    2 - carousel args
+    */
+    owlsonrequireddevicesonly("#sync1 , #sync2", breakpoint, e);
 })

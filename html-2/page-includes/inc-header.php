@@ -30,6 +30,9 @@ function minify_output($buffer)
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
+		body{
+			font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
 		li{
 			list-style: none;
 		}
@@ -636,7 +639,7 @@ function minify_output($buffer)
 			<header>
 				<div class="main-header">
 					<a href="#" id="logo">
-						<img class="img-responsive res-img" src="../images/logo.png" alt="">
+						<img class="img-responsive res-img" src="../images/logo.svg" alt="">
 					</a>
 					<div class="menu-outer">
 						<?php require_once('../modules/main-menu.php'); ?>

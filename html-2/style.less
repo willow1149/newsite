@@ -24,6 +24,8 @@ Text Domain: citrusleisure
     }
 }
 
+  
+
 @font-family{
     font-family: 'Montaga-Regular';
     src: url('fonts/Montaga-Regular.eot?#iefix') format('embedded-opentype'),
@@ -33,25 +35,31 @@ Text Domain: citrusleisure
 }
 
 .section-one{
-        .sec-sub-one{
-            height: 400px;
-            width: 100%;
-            background: red;
-            margin-top: 10px;
-        }
-        .sec-sub-two{
-            height: 400px;
-            width: 100%;
-            background: gold;
-            margin-top: 10px;
-        }
-        .sec-sub-three{
-            height: 400px;
-            width: 100%;
-            background: blue;
-            margin-top: 10px;
+    margin-top: 15px;
+    .no-padding{
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        [class*="col-"]{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
         }
     }
+}
+
+.section-two-carousel{
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+    .sync-1 , .sync-2{
+        .item{
+            .item-inner{
+
+            }
+            .inner{
+                background-color: #fbfee3;
+            }
+        }
+    }
+}
 
 // #Media Queries
 /* ================================================== */
@@ -87,6 +95,164 @@ Text Domain: citrusleisure
             border-width: 5px;
             border-style: solid;
             border-color: transparent transparent #f1f1f1 transparent;
+        }
+    }
+    .section-one{
+        margin-top: 15px;
+        .no-padding{
+            background-color: #f5f5f5;
+            max-width: 1600px;
+            height: 400px;
+            .right-section{
+                height: 100%;
+                transition: all .3s;
+                -webkit-transition: all .3s;
+                .imgbg(no-repeat , 100% , center);
+                &:hover{
+                    background-size: 120%;
+                }
+            }
+            .left-section{ 
+                height: 100%;
+                padding: 90px;
+                .txt-layer{
+                    text-align: justify;
+                    text-align-last: center;
+                    -moz-text-align-last: center;
+                    p{
+                        margin: 20px 50px 50px 50px;
+                        font-size: 20px;
+                    }
+                }
+                .link{
+                    border: 1px solid #333;
+                    padding: 10px 20px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    width: 115px;
+                    margin: 0 auto;
+                    transition: all 1s;
+                    font-weight: 900;
+                    color: @black;
+                    &:hover , &:active{
+                        background-color: #01809c;
+                        text-decoration: none;
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+    .section-two-carousel{
+        margin-top: 25px;
+        .sync-1{
+            width: 100%;
+            font-size: 0;
+            .item{
+                width: 25%;
+                display: inline-block;
+                font-size: 14px;
+                text-align: center;
+                .item-inner{
+                    height: 200px;
+                    width: 100%;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    min-height: 150px;
+                    p{
+                        padding-top: 10px;
+                        padding-bottom: 25px;
+                    }
+                    .item-inner-link{
+                        border: 1px solid #333;
+                        color: @black;
+                        font-weight: 500;
+                        padding: 12px 20px;
+                        border: 1px solid #333;
+                        color: #000;
+                        font-weight: 500;
+                        padding: 12px 20px;
+                        width: 111px;
+                        margin: 0 auto;
+                        &:hover , :active{
+                            background-color: #01809c;
+                            text-decoration: none;
+                        }
+                    }
+                    &:before{
+
+                    }
+                }
+            }
+            .first-item{
+                width: 50%;
+                vertical-align: top;
+                padding-right: 1px;
+                .inner{
+                    p{
+                        padding-bottom: 45px;
+                    }
+                }
+            }
+            .sec-item{
+                padding-right: 1px;
+            }
+        }
+        .sync-2{
+            width: 100%;
+            font-size: 0;
+            .item{
+                width: 25%;
+                display: inline-block;
+                font-size: 14px;
+                text-align: center;
+                .item-inner{
+                    height: 200px;
+                    width: 100%;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    min-height: 150px;
+                    p{
+                        padding-top: 10px;
+                        padding-bottom: 25px;
+                    }
+                    .item-inner-link{
+                        border: 1px solid #333;
+                        color: @black;
+                        font-weight: 500;
+                        padding: 12px 20px;
+                        border: 1px solid #333;
+                        color: #000;
+                        font-weight: 500;
+                        padding: 12px 20px;
+                        width: 111px;
+                        margin: 0 auto;
+                        &:hover , :active{
+                            background-color: #01809c;
+                            text-decoration: none;
+                        }
+                    }
+                    &:before{
+
+                    }
+                }
+            }
+            .third-item{
+                width: 50%;
+                vertical-align: top;
+                padding-left: 1px;
+                .inner{
+                    p{
+                        padding-bottom: 45px;
+                    }
+                }
+            }
+            .sec-item{
+                padding-left: 1px;
+            }
         }
     }
 }
@@ -127,15 +293,17 @@ Text Domain: citrusleisure
         right: 0;
         margin:0 15px;
         border-radius: 5px;
+        position: absolute;
+        z-index: 1;
         &:after{
             content: '';
             position: absolute;
-            top: 100%;
+            top: -9px;
             left: 50%;
             margin-left: -5px;
             border-width: 5px;
             border-style: solid;
-            border-color: #555 transparent transparent transparent;
+            border-color: transparent transparent #f1f1f1 transparent;
         }
     }
     .social-icons .text{
@@ -152,10 +320,153 @@ Text Domain: citrusleisure
         padding: 10px;
         height: 45px;
     }
+    .section-one{
+        .no-padding{
+            .right-section{
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 400px;
+                width: 100%;
+                overflow: hidden; 
+            }
+            .left-section{
+                height: 300px;
+                color: black;
+                .txt-layer{
+                    padding: 40px;
+                    text-align: justify;
+                    -moz-text-align-last: center; /* Code for Firefox */
+                    text-align-last: center;
+                }
+                .link{
+                    border: 1px solid #333;
+                    color: @black;
+                    font-weight: 500;
+                    padding: 12px 20px;
+                    border: 1px solid #333;
+                    color: #000;
+                    font-weight: 500;
+                    padding: 12px 20px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    width: 111px;
+                    margin: 0 auto;
+                    &:hover , :active{
+                        background-color: #01809c;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
 }
 // Tablet Portrait size to standard 960 (devices and browsers)
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
+    .section-two-carousel{
+        .sync-1{
+            margin-top: 10px;
+            .item{
+                width: 100%;
+                font-size: 0;
+                .item-inner{
+                    display: inline-block;
+                    float: right;
+                    height: 300px;
+                    width: 50%;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    display: inline-block;
+                    float: left;
+                    width: 50%;
+                    font-size: 14px;
+                    height: 300px;
+                    padding-top: 80px;
+                    position: relative;
+                    p{
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    .item-inner-link{
+                        font-weight: 900;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 113px;
+                        margin: 10px auto 0 auto;
+                        padding: 10px 20px;
+                        border: 1px solid #333;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: -40px;
+                        height: 20px;
+                        border-width: 20px;
+                        border-style: solid;
+                        border-color: transparent transparent #fbfee3 transparent;
+                        transform: rotate(90deg);
+                        margin: auto 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .section-two-carousel{
+        .sync-2{
+            margin-top: 10px;
+            .item{
+                width: 100%;
+                font-size: 0;
+                .item-inner{
+                    display: inline-block;
+                    height: 300px;
+                    width: 50%;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    display: inline-block;
+                    width: 50%;
+                    font-size: 14px;
+                    height: 300px;
+                    vertical-align: top;
+                    padding-top: 80px;
+                    position: relative;
+                    p{
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                    .item-inner-link{
+                        font-weight: 900;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 113px;
+                        margin: 10px auto 0 auto;
+                        padding: 10px 20px;
+                        border: 1px solid #333;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -40px;
+                        height: 20px;
+                        border-width: 20px;
+                        border-style: solid;
+                        border-color: transparent transparent #fbfee3 transparent;
+                        transform: rotate(-90deg);
+                        margin: auto 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
 }
 // All Mobile Sizes (devices and browser) 
 @media only screen and (max-width: 767px) {
@@ -169,23 +480,62 @@ Text Domain: citrusleisure
         }
     }
     .section-one{
-        .sec-sub-one{
+        .sec-sub{
             height: 400px;
             width: 100%;
-            background: red;
             margin-top: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-        .sec-sub-two{
-            height: 400px;
-            width: 100%;
-            background: gold;
+    }
+    .section-two-carousel{
+        .sync-1 , .sync-2{
             margin-top: 10px;
-        }
-        .sec-sub-three{
-            height: 400px;
-            width: 100%;
-            background: blue;
-            margin-top: 10px;
+            .item{
+                display: block;
+                .item-inner{
+                    width: 100%;
+                    height: 300px;
+                    .imgbg(no-repeat,cover,center);
+                }
+                .inner{
+                    height: 200px;
+                    background-color: #fbfee3;
+                    position: relative;
+                    p{
+                        text-align: center;
+                        padding-top: 55px;
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        top: -40px;
+                        left: 50%;
+                        border-width: 20px;
+                        border-style: solid;
+                        border-color: transparent transparent #fbfee3 transparent;
+                        transform: translateX(-50%);
+                    }
+                    .item-inner-link{
+                        border: 1px solid #333;
+                        padding: 10px 20px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        width: 115px;
+                        margin: 25px auto;
+                        transition: all 1s;
+                        font-weight: 900;
+                        color: @black;
+                        &:hover , &:active{
+                            background-color: #01809c;
+                            text-decoration: none;
+                            color: @white;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -199,6 +549,9 @@ Text Domain: citrusleisure
 }   
 // Mobile Portrait (320px) 
 @media only screen and (max-width: 320px) {
+    .section-one .no-padding .left-section{
+        height: 375px;
+    }
 
 } 
 // Mixin
@@ -239,6 +592,12 @@ Text Domain: citrusleisure
         background : @hover;
         color: @hover-color;
     }
+}
+
+.imgbg(@repeat , @cover , @center){
+    background-repeat: @repeat;
+    background-size: @cover;
+    background-position: @center;
 }
 
 /**
